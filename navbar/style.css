@@ -89,3 +89,43 @@
   border-radius: 2px;
   cursor: pointer;
 }
+
+.mobile-menu {
+  display: none;
+}
+
+.mobile-dropdown {
+  display: none;
+}
+
+/* Media Queries */
+@media (max-width: 1000px) {
+  .nav-bar,
+  .cta {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+    justify-self: end;
+    margin-right: 30px;
+    font-size: 35px;
+  }
+
+  .header {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .mobile-dropdown {
+    display: none;
+    margin-top: 40px;
+    border: 1px solid black;
+  }
+
+  .mobile-show {
+    display: flex;
+  }
+}
