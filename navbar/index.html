@@ -4,17 +4,32 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Navigation Bar</title>
   </head>
   <body>
     <header>
       <div class="header">
-        <div class="logo">LOGO</div>
-        <div class="navigation"></div>
+        <div class="logo font">LOGO</div>
+        <div class="nav-bar font">
+          <div class="nav-item"><a href="#">home</a></div>
+          <div class="nav-item"><a href="#">about</a></div>
+          <div class="nav-item"><a href="#">media</a></div>
+          <div class="nav-item dropdown-item">
+            <a href="#" class="testimonial">testimonial</a>
+            <div class="dropdown" id="dropdownContent">
+              <span class="one">Testimonial 1</span>
+              <span class="one">Testimonial 2</span>
+              <span class="one">Testimonial 3</span>
+            </div>
+          </div>
+        </div>
         <div class="cta">
-          <button class="action">contact us</button>
+          <button class="action font">contact us</button>
         </div>
       </div>
     </header>
+
+    <script src="script.js"></script>
   </body>
 </html>
