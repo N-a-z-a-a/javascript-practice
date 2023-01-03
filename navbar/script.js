@@ -9,7 +9,8 @@ parentMenu.addEventListener("click", dropdown);
 
 window.onclick = function (e) {
   if (!e.target.matches(".testimonial")) {
-    const dropdowns = document.getElementsByClassName("dropdown");
+    console.log("Gotcha");
+    const dropdowns = document.getElementsByClassName("drop-down");
     for (let i = 0; i < dropdowns.length; i++) {
       const items = dropdowns[i];
       if (items.classList.contains("show")) {
@@ -26,26 +27,16 @@ mobileMenu.addEventListener("click", onClick);
 const mobileDropdown = document.querySelector(".mobile-dropdown");
 
 function onClick() {
-  mobileDropdown.classList.toggle("mobile-show");
+  mobileDropdown.classList.toggle("show");
 }
 
 const dropdownItems = document.querySelectorAll(".mobile-nav-item");
 for (let item of dropdownItems) {
   item.addEventListener("click", function () {
-    if (mobileDropdown.classList.contains("mobile-show")) {
-      mobileDropdown.classList.remove("mobile-show");
+    if (mobileDropdown.classList.contains("show")) {
+      mobileDropdown.classList.remove("show");
     }
   });
 }
 
-window.onclick = function (e) {
-  if (!e.target.matches(".mobile-menu")) {
-    const mobileDropdown = document.getElementsByClassName("mobile-dropdown");
-    for (let i = 0; i < mobileDropdown.length; i++) {
-      const items = mobileDropdown[i];
-      if (items.classList.contains("mobile-show")) {
-        items.classList.remove("mobile-show");
-      }
-    }
-  }
-};
+

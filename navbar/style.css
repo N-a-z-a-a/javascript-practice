@@ -125,7 +125,7 @@
     border: 1px solid black;
   }
 
-  .mobile-show {
+  .show {
     display: flex;
   }
 }
