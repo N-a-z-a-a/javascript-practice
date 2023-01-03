@@ -9,7 +9,6 @@ parentMenu.addEventListener("click", dropdown);
 
 window.onclick = function (e) {
   if (!e.target.matches(".testimonial")) {
-    console.log("Gotcha");
     const dropdowns = document.getElementsByClassName("drop-down");
     for (let i = 0; i < dropdowns.length; i++) {
       const items = dropdowns[i];
@@ -38,5 +37,3 @@ for (let item of dropdownItems) {
     }
   });
 }
-
-
