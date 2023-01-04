@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 18px;
+}
+
+.container {
+  margin: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  cursor: pointer;
+}
+
+.controls div,
+.reset {
+  border: 0.5px solid black;
+  border-radius: 5px;
+  width: 50px;
+  height: 50px;
+  padding: 14px;
+  text-align: center;
+}
+
+.count {
+  font-size: 32px;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    margin: 50px auto;
+  }
+}
