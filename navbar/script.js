@@ -20,20 +20,25 @@ window.onclick = function (e) {
 };
 
 // Mobile View
+const mobileDropdown = document.querySelector(".mobile-dropdown");
 const mobileMenu = document.getElementById("mobileMenu");
 mobileMenu.addEventListener("click", onClick);
-
-const mobileDropdown = document.querySelector(".mobile-dropdown");
-
 function onClick() {
   mobileDropdown.classList.toggle("show");
 }
 
 const dropdownItems = document.querySelectorAll(".mobile-nav-item");
 for (let item of dropdownItems) {
-  item.addEventListener("click", function () {
+  item.addEventListener("click", function (e) {
     if (mobileDropdown.classList.contains("show")) {
       mobileDropdown.classList.remove("show");
     }
   });
+}
+
+const testimonial = document.querySelector(".mobile-testimonial");
+testimonial.addEventListener("click", clickFunc);
+function clickFunc() {
+  const dropdown = document.getElementById("dropdownContent");
+  dropdown.classList.toggle("mobile-dropdownContent-show");
 }
