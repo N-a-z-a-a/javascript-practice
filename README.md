@@ -5,3 +5,4 @@ N/B: The focus is Javascript
 1. Navigation bar - navbar
 2. Counter
 3. Modal
+4. Color flipper
