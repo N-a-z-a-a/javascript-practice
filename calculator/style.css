@@ -42,8 +42,8 @@
   color: black;
   text-align: start;
   justify-content: flex-end;
-  /* padding: 5px; */
 }
+
 .clear {
   grid-area: clear;
 }
