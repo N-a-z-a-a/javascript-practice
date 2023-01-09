@@ -6,4 +6,5 @@ N/B: The focus is Javascript
 2. Counter
 3. Modal
 4. Color flipper
-5. Calculator
+5. Calculator App
+6. Todo App
