@@ -8,3 +8,4 @@ N/B: The focus is Javascript
 4. <a href='https://n-a-z-a-a.github.io/javascript-practice/colorFlipper/index.html'>Color flipper</a>
 5. <a href='https://n-a-z-a-a.github.io/javascript-practice/calculator/index.html'>Calculator App</a>
 6. <a href='https://n-a-z-a-a.github.io/javascript-practice/todo/index.html'>Todo App</a>
+7. <a href='https://n-a-z-a-a.github.io/javascript-practice/weather/index.html'>Weather App</a>
