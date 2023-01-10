@@ -1,5 +1,5 @@
 const key = "544eb5a9c2e94d84842130842231001";
-const baseURL = "http://api.weatherapi.com/v1";
+const baseURL = "https://api.weatherapi.com/v1";
 // requestURL = `${baseURL}/current.json?key=${key}&q=${lat},${lon}`;
 // "https://api.weatherapi.com/v1/current.json?key=544eb5a9c2e94d84842130842231001&q=Nigeria&aqi=no";
 
