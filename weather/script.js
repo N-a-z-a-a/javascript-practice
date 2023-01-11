@@ -28,8 +28,12 @@ if (navigator.geolocation) {
           const location = document.querySelector(".place");
           location.textContent = data.location.name;
 
+          const currentDateTime = new Date();
           const dateAndTime = document.querySelector(".date-time");
-          dateAndTime.textContent = data.location.localtime + "pm";
+          // dateAndTime.textContent = data.location.localtime;
+          dateAndTime.textContent = `${currentDateTime.toLocaleDateString(
+            "en-GB"
+          )} - ${currentDateTime.toLocaleTimeString()}`;
 
           const icon = document.querySelector(".icon");
           icon.style.display = "block";
