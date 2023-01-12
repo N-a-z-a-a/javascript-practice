@@ -34,7 +34,6 @@ if (navigator.geolocation) {
           dateAndTime.textContent = `${currentDateTime.toLocaleDateString(
             "en-GB"
           )} - ${currentDateTime.toLocaleTimeString()}`;
-
           const icon = document.querySelector(".icon");
           icon.style.display = "block";
           icon.src = data.current.condition.icon;
