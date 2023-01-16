@@ -26,6 +26,7 @@ btn.addEventListener("click", function () {
           countriesList.append(parentDiv);
         });
 
+        // Manual Search without API
         const search = document.querySelector(".search");
         search.onkeyup = function () {
           const input = search.value.toLowerCase();
@@ -39,5 +40,18 @@ btn.addEventListener("click", function () {
           }
         };
       }
+    });
+});
+
+//restcountries.com/v2/name/${country}
+const button1 = document.getElementById("a");
+button1.addEventListener("click", function () {
+  const anotherInput = document.querySelector(".search2");
+  value2 = anotherInput.value.toLowerCase();
+
+  fetch(`https://restcountries.com/v2/name/${value2}`)
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
     });
 });
