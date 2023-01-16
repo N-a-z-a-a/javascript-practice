@@ -26,7 +26,6 @@ btn.addEventListener("click", function () {
           countriesList.append(parentDiv);
         });
 
-        // Manual Search without API
         const search = document.querySelector(".search");
         search.onkeyup = function () {
           const input = search.value.toLowerCase();
