@@ -3,12 +3,12 @@ console.log(search);
 
 search.onfocus = function () {
   search.placeholder = "";
-  search.style.padding = "20px";
+  search.style.padding = "10px";
 };
 
 search.onblur = function () {
   search.placeholder = "Enter a country...";
-  search.style.padding = "20px";
+  // search.style.padding = "15px";
 };
 
 const button = document.getElementById("btn");
@@ -29,19 +29,20 @@ button.addEventListener("click", function () {
         const capital = document.createElement("p");
         capital.textContent = country.capital;
 
-        const denonym = document.createElement("p");
-        denonym.textContent = country.denonym;
+        // const denonym = document.createElement("p");
+        // denonym.textContent = country.denonym;
 
-        const region = document.createElement("p");
-        region.textContent = country.region;
+        // const region = document.createElement("p");
+        // region.textContent = country.region;
 
         const timezones = document.createElement("p");
         timezones.textContent = country.timezones;
 
         const flag = document.createElement("img");
         flag.src = country.flag;
-        flag.style.height = "50px";
-        flag.style.width = "50px";
+        flag.classList.add("img");
+        // flag.style.height = "50px";
+        // flag.style.width = "50px";
 
         const callingCodes = document.createElement("p");
         callingCodes.textContent = "+" + country.callingCodes;
@@ -52,9 +53,9 @@ button.addEventListener("click", function () {
         containingDiv.append(
           countryName,
           capital,
-          denonym,
-          region,
-          timezones,
+          // denonym,
+          // region,
+          // timezones,
           flag,
           callingCodes,
           currencies
