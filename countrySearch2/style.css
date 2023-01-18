@@ -36,23 +36,25 @@ button {
 .results {
   width: 100%;
   margin-top: 20px;
+  overflow: auto;
+  font-size: 16px;
 }
 
-.heading {
-  /* width: 100%; */
-  /* display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
+.table {
   border: 1px solid black;
-  padding: 0 5px; */
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 10px;
+  border-collapse: collapse;
+  display: none;
+}
+
+.head {
+  background-color: #dfe2e2;
   border: 1px solid black;
-  padding: 0 5px;
+}
+
+.items {
+  text-align: center;
+  border: 1px solid black;
+  padding: 10px;
 }
 
 .name {
@@ -60,57 +62,46 @@ button {
   text-align: center;
 }
 
-.country-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 10px;
-  border: 1px solid black;
-  padding: 0 5px;
-}
-
-.country-container > * {
-  font-size: 20px;
-  /* border-right: 1px solid black; */
-}
-
-.img {
+.flag > img {
   width: 35px;
   height: 35px;
 }
 
 @media (min-width: 768px) {
+  .title {
+    font-size: 40px;
+  }
+
   .query {
     gap: 10px;
     display: flex;
-    width: 80%;
+    width: 90%;
+    margin: 35px 0;
     justify-content: space-between;
     align-items: center;
   }
 
   button {
-    padding: 24px 45px;
+    padding: 15px 45px;
     border-radius: 7px;
     font-size: 24px;
   }
 
   input {
     width: 80%;
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
     font-size: 32px;
   }
 
-  input[placeholder~="Enter"] {
-    /* font-style: italic; */
-    font-size: 32px;
-  }
-
-  .country-container {
+  .results {
     display: flex;
-    flex-direction: row;
-    gap: 20px;
     justify-content: center;
     align-items: center;
+    font-size: 24px;
+  }
+
+  .table {
+    width: 90%;
   }
 }

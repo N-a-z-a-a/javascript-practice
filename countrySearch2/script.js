@@ -1,5 +1,4 @@
 const search = document.getElementById("search");
-console.log(search);
 
 search.onfocus = function () {
   search.placeholder = "";
@@ -8,7 +7,6 @@ search.onfocus = function () {
 
 search.onblur = function () {
   search.placeholder = "Enter a country...";
-  // search.style.padding = "15px";
 };
 
 const button = document.getElementById("btn");
@@ -19,63 +17,96 @@ button.addEventListener("click", function () {
     .then((res) => res.json())
     .then((data) => {
       data.map((country) => {
-        console.log(country.currencies[0]);
-        const containingDiv = document.createElement("div");
-        containingDiv.classList.add("country-container");
+        const table = document.querySelector(".table");
+        table.style.display = "table";
 
-        const countryName = document.createElement("p");
+        const row = document.createElement("tr");
+
+        const countryName = document.createElement("td");
+        countryName.classList.add("items");
         countryName.textContent = country.name;
 
-        const capital = document.createElement("p");
-        capital.textContent = country.capital;
+        const countryCapital = document.createElement("td");
+        countryCapital.classList.add("items");
+        countryCapital.textContent = country.capital;
 
-        // const denonym = document.createElement("p");
-        // denonym.textContent = country.denonym;
-
-        // const region = document.createElement("p");
-        // region.textContent = country.region;
-
-        const timezones = document.createElement("p");
-        timezones.textContent = country.timezones;
-
+        const countryFlag = document.createElement("td");
+        countryFlag.classList.add("items", "flag");
         const flag = document.createElement("img");
         flag.src = country.flag;
-        flag.classList.add("img");
-        // flag.style.height = "50px";
-        // flag.style.width = "50px";
+        console.log(flag);
+        countryFlag.appendChild(flag);
 
-        const callingCodes = document.createElement("p");
+        const callingCodes = document.createElement("td");
+        callingCodes.classList.add("items");
         callingCodes.textContent = "+" + country.callingCodes;
 
-        const currencies = document.createElement("p");
+        const currencies = document.createElement("td");
+        currencies.classList.add("items");
         currencies.textContent = `${country.currencies[0].name} (${country.currencies[0].symbol})`;
 
-        containingDiv.append(
+        row.append(
           countryName,
-          capital,
-          // denonym,
-          // region,
-          // timezones,
-          flag,
+          countryCapital,
+          countryFlag,
           callingCodes,
           currencies
         );
 
-        const results = document.querySelector(".results");
-        results.appendChild(containingDiv);
+        const tableBody = document.querySelector(".body");
+        tableBody.append(row);
       });
-
-      console.log(data);
     });
 });
 
 search.addEventListener("keypress", function (e) {
   if (e.key === "Enter") {
     const input = search.value.toLowerCase();
+    search.value = "";
+    search.placeholder = "Enter a country...";
     fetch(`https://restcountries.com/v2/name/${input}`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        data.map((country) => {
+          const table = document.querySelector(".table");
+          table.style.display = "table";
+
+          const row = document.createElement("tr");
+
+          const countryName = document.createElement("td");
+          countryName.classList.add("items");
+          countryName.textContent = country.name;
+
+          const countryCapital = document.createElement("td");
+          countryCapital.classList.add("items");
+          countryCapital.textContent = country.capital;
+
+          const countryFlag = document.createElement("td");
+          countryFlag.classList.add("items", "flag");
+          const flag = document.createElement("img");
+          flag.src = country.flag;
+          console.log(flag);
+          countryFlag.appendChild(flag);
+
+          const callingCodes = document.createElement("td");
+          callingCodes.classList.add("items");
+          callingCodes.textContent = "+" + country.callingCodes;
+
+          const currencies = document.createElement("td");
+          currencies.classList.add("items");
+          currencies.textContent = `${country.currencies[0].name} (${country.currencies[0].symbol})`;
+
+          row.append(
+            countryName,
+            countryCapital,
+            countryFlag,
+            callingCodes,
+            currencies
+          );
+
+          const tableBody = document.querySelector(".body");
+          tableBody.append(row);
+        });
       });
   }
 });
