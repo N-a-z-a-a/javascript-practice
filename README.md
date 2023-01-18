@@ -11,6 +11,6 @@ N/B: The focus is Javascript
 7. <a href='https://n-a-z-a-a.github.io/javascript-practice/weather/index.html'>Weather App</a>
 8. Countries List
 <ul>
-  <li><a href='https://n-a-z-a-a.github.io/javascript-practice/countrySearch/countrySearch-v2/index.html'>Countries List App</a></li>
-  <li><a href='https://n-a-z-a-a.github.io/javascript-practice/countrySearch/countrySearch-v2/index.html'>Countries List App - v2</a></li>
+  <li><a href='https://n-a-z-a-a.github.io/javascript-practice/countrySearch/countrySearch1/index.html'>Countries List App</a></li>
+  <li><a href='https://n-a-z-a-a.github.io/javascript-practice/countrySearch/countrySearch2/index.html'>Countries List App - v2</a></li>
 </ul>
