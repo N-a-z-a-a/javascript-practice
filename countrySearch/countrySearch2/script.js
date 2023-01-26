@@ -16,6 +16,11 @@ button.addEventListener("click", function () {
   fetch(`https://restcountries.com/v2/name/${input}`)
     .then((res) => res.json())
     .then((data) => {
+      if (data.status === 404) {
+        const info = alert("This country does not exist!");
+        return info;
+      } 
+
       data.map((country) => {
         const table = document.querySelector(".table");
         table.style.display = "table";
@@ -34,7 +39,6 @@ button.addEventListener("click", function () {
         countryFlag.classList.add("items", "flag");
         const flag = document.createElement("img");
         flag.src = country.flag;
-        console.log(flag);
         countryFlag.appendChild(flag);
 
         const callingCodes = document.createElement("td");
@@ -67,6 +71,11 @@ search.addEventListener("keypress", function (e) {
     fetch(`https://restcountries.com/v2/name/${input}`)
       .then((res) => res.json())
       .then((data) => {
+        if (data.status === 404) {
+          const info = alert("This country does not exist!");
+          return info;
+        }
+
         data.map((country) => {
           const table = document.querySelector(".table");
           table.style.display = "table";
@@ -85,7 +94,6 @@ search.addEventListener("keypress", function (e) {
           countryFlag.classList.add("items", "flag");
           const flag = document.createElement("img");
           flag.src = country.flag;
-          console.log(flag);
           countryFlag.appendChild(flag);
 
           const callingCodes = document.createElement("td");
